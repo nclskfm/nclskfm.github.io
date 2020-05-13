@@ -4,13 +4,37 @@ html, body {
 }
 
 body {
-    background: linear-gradient(30deg, #4183D7, #8f61b4);
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     text-align: center;
+    background: linear-gradient(55deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    animation: background-color-change 40s ease-in-out infinite;
+}
+
+@-webkit-keyframes background-color-change {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes background-color-change {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes background-color-change {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes background-color-change { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
 }
 
 .container {
@@ -37,6 +61,15 @@ img {
     height: 2rem;
     width: 2rem;
     fill: white;
+}
+
+a :hover {
+    filter: 
+    invert(0.5)
+    sepia(1)
+    hue-rotate(200deg)
+    saturate(4)
+    brightness(1);
 }
 
 .social-media-row {
