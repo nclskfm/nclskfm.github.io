@@ -11,7 +11,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-family: 'Lato', sans-serif;
     text-align: center;
-    background: linear-gradient(55deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background: linear-gradient(55deg, #23D5AB, #23A6D5, #a02a57, #EE7752);
     background-size: 400% 400%;
     animation: background-color-change 40s ease-in-out infinite;
 }
