@@ -1,3 +1,5 @@
+/* ******************* BODY ******************* */
+
 html,
 body {
   height: 100%;
@@ -16,6 +18,8 @@ body {
   background-size: 400% 400%;
   animation: background-color-change 40s ease-in-out infinite;
 }
+
+/* ******************* BACKGROUND ANIMATION ******************* */
 
 @-webkit-keyframes background-color-change {
   0% {
@@ -62,10 +66,14 @@ body {
   }
 }
 
+/* ******************* CONTAINER ******************* */
+
 .container {
   padding: 1rem;
   text-align: center;
 }
+
+/* ******************* MOBILE VIEW ******************* */
 
 .mobile-header {
   display: none;
@@ -84,15 +92,21 @@ body {
   }
 }
 
+/* ******************* HEAD LINE ******************* */
+
 h1 {
   margin: 0;
   padding: 0;
   font-size: 2.2rem;
 }
 
+/* ******************* DIVIDER ******************* */
+
 hr {
   margin: 4px 0 12px 0;
 }
+
+/* ******************* SOCIAL MEDIA ROW ******************* */
 
 .social-media-row {
   width: 100%;
@@ -102,12 +116,12 @@ hr {
   align-items: center;
 }
 
-a {
+.social-media-row a {
   color: white;
   text-decoration: none;
 }
 
-a :hover {
+.social-media-row a :hover {
   filter: invert(0.5) sepia(1) hue-rotate(200deg) saturate(4) brightness(1);
 }
 
@@ -117,13 +131,13 @@ img {
   fill: white;
 }
 
-/* Tooltip container */
+/* ******************* TOOLTIP ******************* */
+
 .tooltip {
   position: relative;
   display: inline-block;
 }
 
-/* Tooltip text */
 .tooltip .tooltiptext,
 .tooltip .tooltipbackground {
   visibility: hidden;
@@ -137,7 +151,7 @@ img {
   width: 200px;
   top: 120%;
   left: 50%;
-  margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  margin-left: -100px;
 }
 
 .tooltip .tooltiptext {
@@ -152,16 +166,15 @@ img {
   filter: invert(0.5) sepia(1) hue-rotate(200deg) saturate(4) brightness(1);
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext,
 .tooltip:hover .tooltipbackground {
   visibility: visible;
 }
 
+/* ******************* FOOTER ******************* */
+
 .footer {
   position: absolute;
-  left: auto;
-  right: auto;
   bottom: 20px;
 }
 
@@ -171,10 +184,19 @@ img {
   text-decoration-line: underline;
 }
 
+@media (max-height: 800px) {
+  .footer {
+    bottom: 5px;
+  }
+}
+
+/* ******************* IMPRESSUM ******************* */
+
 .impressum-container {
   display: inline;
-  width: 60%;
-  min-width: 400px;
+  width: 80%;
+  max-height: 90%;
+  max-width: 1000px;
   padding: 1rem;
   text-align: left;
   background-color: rgba(255, 255, 255, 0.4);
@@ -183,9 +205,9 @@ img {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
   border-radius: 10px;
+  overflow-y: auto;
 }
 
 .impressum-container a {
   color: black;
-  text-decoration-line: underline;
 }
