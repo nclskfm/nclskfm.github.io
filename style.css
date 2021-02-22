@@ -1,99 +1,159 @@
-html, body {
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    background: linear-gradient(55deg, #23D5AB, #23A6D5, #a02a57, #EE7752);
-    background-size: 400% 400%;
-    animation: background-color-change 40s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  background: linear-gradient(55deg, #23d5ab, #23a6d5, #a02a57, #ee7752);
+  background-size: 400% 400%;
+  animation: background-color-change 40s ease-in-out infinite;
 }
 
 @-webkit-keyframes background-color-change {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
 }
 @-moz-keyframes background-color-change {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
 }
 @-o-keyframes background-color-change {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
 }
-@keyframes background-color-change { 
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+@keyframes background-color-change {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
 }
 
 .container {
-    padding: 1rem;
-    text-align: center;
+  padding: 1rem;
+  text-align: center;
 }
 
 .mobile-header {
-    display: none;
+  display: none;
 }
 
 .desktop-header {
-    display: block;
+  display: block;
 }
 
-@media(max-width: 500px) {
-    .mobile-header {
-        display: block;
-    }
-    .desktop-header {
-        display: none;
-    }
+@media (max-width: 500px) {
+  .mobile-header {
+    display: block;
+  }
+  .desktop-header {
+    display: none;
+  }
 }
 
 h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 2.2rem;
+  margin: 0;
+  padding: 0;
+  font-size: 2.2rem;
 }
 
-
 hr {
-    margin: 4px 0 12px 0;
+  margin: 4px 0 12px 0;
 }
 
 .social-media-row {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 a :hover {
-    filter: 
-    invert(0.5)
-    sepia(1)
-    hue-rotate(200deg)
-    saturate(4)
-    brightness(1);
+  filter: invert(0.5) sepia(1) hue-rotate(200deg) saturate(4) brightness(1);
 }
 
 img {
-    height: 2rem;
-    width: 2rem;
-    fill: white;
+  height: 2rem;
+  width: 2rem;
+  fill: white;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext,
+.tooltip .tooltipbackground {
+  visibility: hidden;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  top: 120%;
+  left: 50%;
+  margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+.tooltip .tooltiptext {
+  background-color: transparent;
+  z-index: 2;
+  filter: none !important;
+}
+
+.tooltip .tooltipbackground {
+  background-color: white;
+  z-index: 1;
+  filter: invert(0.5) sepia(1) hue-rotate(200deg) saturate(4) brightness(1);
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext,
+.tooltip:hover .tooltipbackground {
+  visibility: visible;
 }
