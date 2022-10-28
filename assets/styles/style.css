@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Thin.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato-Thin.ttf);
+}
+
 /* ******************* BODY ******************* */
 
 html,
@@ -11,8 +21,8 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  font-family: "Roboto", sans-serif;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', 'Roboto', sans-serif;
+  /* font-family: 'Lato', sans-serif; */
   text-align: center;
   background: linear-gradient(55deg, #23d5ab, #23a6d5, #a02a57, #ee7752);
   background-size: 400% 400%;
